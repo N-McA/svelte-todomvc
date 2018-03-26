@@ -6,7 +6,7 @@
     "copyfiles": "cp node_modules/todomvc-app-css/index.css public/todomvc-app-css.css && cp node_modules/todomvc-common/base.css public/todomvc-common.css && cp node_modules/todomvc-common/base.js public/todomvc-common.js",
     "build": "npm run copyfiles && rollup -c --environment production",
     "dev": "npm run copyfiles && rollup -c -w",
-    "deploy": "surge public svelte-todomvc.surge.sh",
+    "deploy": "gulp inline",
     "predeploy": "npm run build",
     "start": "http-server public & npm run dev & open http://localhost:8080"
   },
